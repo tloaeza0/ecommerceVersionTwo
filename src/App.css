@@ -1,38 +1,599 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Source+Serif+Pro:wght@300&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+
+}
+body{
+    width:100%;
+    height:100%;
+    background-color: #476930;
+    }
+html{
+    font-size: 18px;
+}
+/* NAVIGATION BAR */
+header{
+    width:100%;
+    
+}
+nav {
+
+    height: 70px;
+    line-height: 70px;
+    position: absolute;
+    margin-left: 10%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav li {
+    list-style: none;
+    display: inline-block;
+    padding: 1em;
+    
+   
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+nav a {
+    text-decoration: none;
+    color:white;
+    font-size: 1em;
+    font-family: 'Cinzel', serif;
+}
+nav a:hover{
+   color:darkgrey;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+
+.hero{
+    width:100% ;
+    height:100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.534),rgba(0, 0, 0, 0.534)), url("https://images.pexels.com/photos/8284916/pexels-photo-8284916.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") no-repeat center /cover;
+}
+.container{
+    width:90%;
+    height:100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container .info h1{
+    font-family: 'Cinzel', serif;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+.container .info p{
+    font-size: 1.4rem;
+    max-width: 45%;
+    color: white;
+    font-family:'Source Serif Pro', serif;
+}
+.container .info a{
+    text-decoration: none;
+    background-color: white;
+    display: inline-block;
+    font-size: 1.5rem;
+    padding: 0.5em 2em;
+    margin-top: 2rem;
+    color: black;
+    font-family:'Cinzel', serif 
+}
+.container .info a:hover{
+    background-color: #eee;
 }
 
-.App-link {
-  color: #61dafb;
+
+@media only screen and (max-width:800px){
+    html{
+        font-size: 10px;
+    }
+
+}
+.about{
+    width:100%;
+    height:60%;
+}
+.about h2{
+    color: white;
+    text-align: center;
+    padding-top:1em ;
+    font-family: 'Cinzel', serif;
+    font-size: 2em;
+}
+.aboutdiv img{
+    height:330px;
+    width:330px;
+    padding: 4em;
+    margin-left: 7%;
+   
+}
+.asideabout p{
+    color:white;
+    padding:1em;
+    font-size: 15px;
+    font-family:  'Source Serif Pro', serif;
+    text-align: center;
+    width:80%;
+    margin-left: 8%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.information{
+    width:100%;
+    height:35vh;
+    background-color: white;
+}
+.information h3{
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    padding-top: 2em;
+    font-size: 2em;
+    color:#051a07;
+}
+.information p{
+    padding: 1em;
+    text-align: center;
+    font-size: 1.5em;
+    color:#051a07;
+    font-family:  'Source Serif Pro', serif;
+}
+
+
+.maindiv{
+    width:100%;
+    height:60vh;
+    position:relative;
+    left:50%;
+    margin-top: 20em;
+    transform: translate(-50%, -50%);
+    background-image:url("https://images.pexels.com/photos/4663833/pexels-photo-4663833.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") ;
+    background-size: 100% 100%;
+    animation:slider 9s infinite linear;
+} 
+
+@keyframes slider{
+    0%{background-image:url("https://images.pexels.com/photos/4663833/pexels-photo-4663833.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") ; }
+    35%{background-image:url("https://images.pexels.com/photos/9935768/pexels-photo-9935768.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"); }
+    75%{background-image:url("https://images.pexels.com/photos/2588632/pexels-photo-2588632.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"); }
+}
+
+
+.newsletter{
+    height:100px;
+    width:300px;
+    margin-top: -40%;
+    margin-left: 10%;
+}
+.newsletter form{
+    margin-left: 10%;
+    margin-top: 5%;
+}
+.newsletter h4{
+    font-size: 1.8em;
+    color: white;
+    font-family:'Cinzel', serif;
+    text-align: center;
+}
+.newsletter p{
+    font-size: 1.5em;
+}
+.newsletter #subscribe{
+    border:none;
+    background: transparent;
+    border-bottom: 1px solid white;
+    font-family:'Source Serif Pro', serif;
+}
+.newsletter #letterbtn{
+    width:100px;
+    height:20px;
+    color:white;
+    background-color:black;
+    border:none;
+    margin-left: 1em;
+    border-radius: 2px;
+    font-family:'Cinzel', serif;
+
+}
+/* FOOTER */
+footer{
+    color:white;
+    font-family:'Cinzel', serif;
+}
+.logo h4{
+    text-align: center;
+    padding-top: 10px;
+    margin-top: 15%;
+    
+}
+.email p{
+    text-align:center;
+    padding-top: 10px;
+}
+.icons{
+    width:100%;
+    position: absolute;
+    margin-left: 33%;
+    
+
+}
+.icons li{
+    display: inline-block;
+    margin: 1em;
+    list-style: none;
+    color:white;
+}
+footer a{
+    color:white;
+}
+footer a:hover{
+    color:#C8B88A;
+}
+
+/* MEDIA QUERY FOR IPAD SIZE */
+
+@media only screen and (min-width:600px)and (max-width:1023px){
+    nav{
+        margin-left: 18%;
+    }
+    nav li{
+        padding: 1.5em;
+    }
+    nav a{
+        font-size: 2em;
+    }
+    .aboutdiv img{
+        height:450px;
+        width:450px;
+        margin-left: 1em;
+        margin-top: 1%;
+    }
+    .about{
+        height:55vh;
+    }
+    .asideabout{
+        margin-left: 53%;
+        margin-top: -50%;
+    }
+    
+    .asideabout p{
+        font-size: 2em;
+    
+    }
+    .infoboxes{
+        display: flex;
+    }
+    .information{
+        height:40vh;
+    }
+    .information p{
+        width:80%;
+        margin-left: 12%;
+        font-size: 1.7em;
+    }
+    .newsletter{
+        margin-top: -20%;
+        margin-left: 25%;
+        width:400px;
+    }
+    .newsletter h4{
+        font-size: 2.5em;
+    }
+    .newsletter #subscribe{
+        font-size: 2em;
+    }
+    .newsletter #letterbtn{
+        width:100px;
+        height:30px;
+    }
+    .logo , .email{
+        font-size: 1.5em;
+    }
+    .icons{
+        margin-left: 33%;
+        font-size: 2em;
+    }
+} 
+
+
+
+/* MEDIA QUERY FOR DESKTOP */
+@media only screen and (min-width:1024px) and (max-width:1800px){
+    
+    nav{
+        margin-left: 33%;
+
+    }
+    nav li{
+        padding: 1em;
+    }
+    .aboutdiv img{
+        height:530px;
+        width:530px;
+        margin-top: -4%;
+    
+    }
+    .about h2{
+        margin-left: 33%;
+    }
+    .about{
+        height:80vh;
+    }
+    .asideabout{
+        margin-left: 40%;
+        margin-top: -35%;
+    }
+    .asideabout p{
+        width:80%;
+        font-size: 1.8em;
+        margin-top: 1em;
+    }
+
+    .infoboxes{
+        display: flex;
+    }
+    .information{
+        height:38vh;
+    }
+    .information h3{
+        font-size: 1.5em;
+
+    }
+    .information p{
+        font-size: 1.2em ;
+    }
+    .maindiv{
+        margin-top: 15.5em;
+        height:80vh;
+    }
+    
+    .newsletter{
+        margin-top: -10%;
+        margin-left:30% ;
+        width:600px;
+    }
+    .newsletter h4{
+        font-size: 2.5em;
+    
+    }
+    .newsletter #subscribe{
+        font-size: 1.3em;
+    }
+    .newsletter #letterbtn{
+        width:150px;
+        height:40px;
+        font-size: 1.2em;
+        margin-left: 2em;
+    }
+    .newsletter #letterbtn:hover{
+        background-color: #C8B88A;
+    }
+    .logo{
+        padding-top: 15px;
+
+    }
+    .icons{
+        margin-left: 42%;
+    }
+}
+
+
+
+
+/* PRODUCTS CSS */
+#product-title h1{
+    text-align: center;
+    color: white;
+    font-family:'Cinzel', serif ;
+    padding-top: 4em;
+    font-size: 3em;
+    letter-spacing: .1em;
+}
+.product-container{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(1,12fr);
+}
+.products{
+    padding-top: 10em;
+    padding-left: 6em;
+}
+.products > .proImg{
+    height:250px;
+    width:250px;
+} 
+.products h2 ,p {
+    color: white;
+    font-family:  'Source Serif Pro', serif;
+}
+.products h2{
+    font-size: 18px;
+    
+}
+.products p{
+    font-size: 12px;
+    width:60%;
+    text-align: left;
+}
+.product-button{
+    width:10em;
+    height:2em;
+    color:white;
+    background-color: black;
+    border:1px solid black;
+    font-family: 'Cinzel', serif;
+    margin-top: 1em;
+}
+.sold-out{
+    width:10em;
+    height:2em;
+    color:red;
+    background-color: black;
+    border:1px solid black;
+    font-family: 'Cinzel', serif;
+    margin-top: 1em;
+
+}
+
+/* MEDIA QUERY FOR IPAD SIZE */
+
+@media only screen and (min-width:600px)and (max-width:1024px){
+    .product-container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap:.5em;
+    }
+    .products{
+        padding: 2em;
+        margin-top: 6em;
+    }
+
+    .products h2{
+        font-size: 1.5em;
+    }
+    .products p{
+        font-size: 1em;
+        width:70%;
+    }
+}
+/* MEDIA QUERY FOR DESKTOP */
+@media only screen and (min-width:1025px) and (max-width:1800px){
+    .product-container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap:2em;
+    }
+    .products{
+        padding: 3em;
+        height:85vh;
+        margin-top: 5em;
+    }
+    .products > .proImg{
+        height:320px;
+        width:320px;
+    }
+    .products h2{
+        font-size: 1.5em;
+        width:100%;
+    }
+    .products p{
+        font-size: 1em;
+        width:100%;
+        
+    }
+    .product-button{
+        height:3em;
+        cursor: pointer;
+    }
+    .sold-out{
+        height:3em;
+    }
+}
+
+/* CONTACT CSS */
+#contact-title h1{
+    color:white;
+    text-align: center;
+    font-size: 3em;
+    font-family: 'Cinzel', serif;
+    padding-top: 40%;
+
+}
+.form-box form{
+    margin-top: 15em;
+    margin-left: 10%;
+}
+
+.form-input{
+    width:300px;
+    background: transparent;
+    border:none;
+    outline:none;
+    border-bottom: 1px solid white;
+    font-size: 2em;
+    margin-bottom: 2em;
+    font-family: 'Source Serif Pro', serif ;
+}
+
+.input{
+    height:45px;
+
+}
+form ::placeholder{
+    color:white;
+}
+form .submit-button{
+    background:black;
+    border-color:transparent;
+    color:white;
+    font-size: 2em;
+    height:50px;
+    margin-top: 2em;
+    width:300px;
+    font-family: 'Source Serif Pro', serif;
+}
+
+
+#other-info{
+    border:1px solid white;
+    width:300px;
+    height:180px;
+    margin-left: 10%;
+    margin-top: 5%;
+}
+#other-info h2, p{
+    text-align: center;
+    color:white;
+    font-family: 'Source Serif Pro', serif ;
+    padding-top: 1em;
+}
+#other-info h2{
+    font-size: 2em;
+}
+#other-info p{
+    font-size: 1.3em;
+}
+/* IPAD MEDIA QUERY */
+@media only screen and (min-width:600px)and (max-width:1024px){
+    #other-info{
+        float: right;
+        margin-top: -50%;
+        border:none;
+    }
+    
+}
+
+
+/* DESKTOP MEDIA QUERY */
+
+@media only screen and (min-width:1025px) and (max-width:1800px){
+    #contact-title h1{
+        padding-top: 18%;
+    }
+    .form-box form{
+        margin-left: 10%;
+        margin-top: 10em;
+    }
+    .form-input{
+        width:600px;
+        font-size: 1.5em;
+    }
+    form .submit-button{
+        margin-top: 1em;
+        cursor: pointer;
+        margin-bottom: 2em;
+    }
+    form .submit-button:hover{
+        background-color: #C8B88A;
+    }
+    #other-info{
+        float: right;
+        margin-right: 5em;
+        margin-top: -37%;
+        border:none;
+    }
 }

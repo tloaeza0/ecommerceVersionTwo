@@ -11,7 +11,7 @@ const OtherProducts = ({
       //   <section id="product-title">
       //     <h1>Plants</h1>
       //   </section>
-
+      
       <main className="product-container">
         
         <div className = "products">
@@ -19,7 +19,8 @@ const OtherProducts = ({
         <img className = "proImg" src = {image}alt ="plant"></img>
         <h2>{product_name}</h2>
         <p>{description}</p>
-        <p>{price}</p>
+        <p>${price} USD</p>
+        <button className="product-button">Buy Now</button>
         </div>
        
       </main>

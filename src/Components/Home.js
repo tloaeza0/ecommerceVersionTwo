@@ -8,7 +8,7 @@ const Home = () => {
             <div className="info">
                 <h1>Earths Haven</h1>
                 <p>Explore different varieties of plants ranging from low light to rare plants.</p>
-                <a href="products.html">Start Exploring</a>
+                <a href= '/Products'>Start Exploring</a>
             </div>
         </div>
     </section>

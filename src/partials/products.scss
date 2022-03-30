@@ -1,0 +1,107 @@
+#product-title h1{
+    text-align: center;
+    color: white;
+    font-family:'Cinzel', serif ;
+    padding-top: 4em;
+    font-size: 3em;
+    letter-spacing: .1em;
+}
+.product-container{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(1,12fr);
+}
+.products{
+    padding-top: 10em;
+    padding-left: 6em;
+    h2,p{
+        color: white;
+    font-family:  'Source Serif Pro', serif;
+    }
+    h2{
+     font-size: 18px;
+    }
+    p{
+        font-size: 12px;
+        width:60%;
+        text-align: left; 
+    }
+}
+.products > .proImg{
+    height:250px;
+    width:250px;
+} 
+
+.product-button{
+    width:10em;
+    height:2em;
+    color:white;
+    background-color: black;
+    border:1px solid black;
+    font-family: 'Cinzel', serif;
+    margin-top: 1em;
+}
+.sold-out{
+    width:10em;
+    height:2em;
+    color:red;
+    background-color: black;
+    border:1px solid black;
+    font-family: 'Cinzel', serif;
+    margin-top: 1em;
+
+}
+
+/* MEDIA QUERY FOR IPAD SIZE */
+
+@media only screen and (min-width:600px)and (max-width:1024px){
+    .product-container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap:.5em;
+    }
+    .products{
+        padding: 2em;
+        margin-top: 6em;
+        h2{
+            font-size: 1.5em;
+        }
+        p{
+            font-size: 1em;
+            width:70%;
+        }
+    }
+}
+/* MEDIA QUERY FOR DESKTOP */
+@media only screen and (min-width:1025px) and (max-width:1800px){
+    .product-container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap:2em;
+    }
+    .products{
+        padding: 3em;
+        height:85vh;
+        margin-top: 5em;
+        h2{
+            font-size: 1.5em;
+            width:100%;
+        }
+        p{
+            font-size: 1em;
+            width:100%;
+        }
+    }
+    .products > .proImg{
+        height:320px;
+        width:320px;
+    }
+   
+    .product-button{
+        height:3em;
+        cursor: pointer;
+    }
+    .sold-out{
+        height:3em;
+    }
+}

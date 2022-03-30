@@ -1,0 +1,103 @@
+/* CONTACT CSS */
+#contact-title h1{
+    color:white;
+    text-align: center;
+    font-size: 3em;
+    font-family: 'Cinzel', serif;
+    padding-top: 40%;
+
+}
+.form-box form{
+    margin-top: 15em;
+    margin-left: 10%;
+}
+
+.form-input{
+    width:300px;
+    background: transparent;
+    border:none;
+    outline:none;
+    border-bottom: 1px solid white;
+    font-size: 2em;
+    margin-bottom: 2em;
+    font-family: 'Source Serif Pro', serif ;
+}
+
+.input{
+    height:45px;
+
+}
+form ::placeholder{
+    color:white;
+}
+form .submit-button{
+    background:black;
+    border-color:transparent;
+    color:white;
+    font-size: 2em;
+    height:50px;
+    margin-top: 2em;
+    width:300px;
+    font-family: 'Source Serif Pro', serif;
+}
+
+
+#other-info{
+    border:1px solid white;
+    width:300px;
+    height:180px;
+    margin-left: 10%;
+    margin-top: 5%;
+    h2,p{
+    text-align: center;
+    color:white;
+    font-family: 'Source Serif Pro', serif ;
+    padding-top: 1em;
+    }
+    h2{
+        font-size: 2em;
+    }
+    p{
+        font-size: 1.3em; 
+    }
+}
+/* IPAD MEDIA QUERY */
+@media only screen and (min-width:600px)and (max-width:1024px){
+    #other-info{
+        float: right;
+        margin-top: -50%;
+        border:none;
+    }
+    
+}
+
+
+/* DESKTOP MEDIA QUERY */
+
+@media only screen and (min-width:1025px) and (max-width:1800px){
+    #contact-title h1{
+        padding-top: 18%;
+    }
+    .form-box form{
+        margin-left: 10%;
+        margin-top: 10em;
+    }
+    .form-input{
+        width:600px;
+        font-size: 1.5em;
+    }
+    form .submit-button{
+        margin-top: 1em;
+        cursor: pointer;
+        margin-bottom: 2em;
+    }
+    form .submit-button:hover{
+        background-color: #C8B88A;
+    }
+    #other-info{
+        float: right;
+        margin-right: 5em;
+        margin-top: -37%;
+        border:none;
+    }
+}

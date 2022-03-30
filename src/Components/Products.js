@@ -1,78 +1,66 @@
-import React from 'react'
-import OtherProducts from './Components/OtherProducts';
+import React from 'react';
+import OtherProducts from './OtherProducts';
 
 class Products extends React.Component{
     constructor(props){
         super(props);
-        this.state = {products :[]};
+        this.state = {products :[]}
     }
+    
     componentDidMount (){
-        fetch("http://localhost:8000/products")
-        .then(response =>{
-            response.json();
-        })
+        //console.log('testing');
+        fetch("http://localhost:8000/plants")
+        .then((response)=>{
+            //console.log(response.status);
+            //console.log(response.json());
+            return response.json();
+        },
+
+        (error)=>{
+            this.setState({error:error});
+            console.log(error.status);
+        }
+        )
         .then((data)=>{
+            console.log(data);
             this.setState({products:data});
         },
-        (error)=>{
-            this.setState({
-                error
-            });
-        }
+        
         );
     }
+
     render(){
-      const {products} = this.state;
-      const allProducts = products.map((product, index)=>{
-          return(
-              <OtherProducts
-              key = {index}
-              image = {product.db.image}
-              product_name = {product.db.product_name}
-              description = {product.db.description}
-              price = {product.db.price}
-              />
+    //   const {products} = this.state.products;
+    //   console.log(this.state)
+      const allProducts = this.state.products.map((product, index)=>{
+         return(
+            <OtherProducts
+            key = {index}
+            image ={product.image}
+            product_name= {product.product_name}
+            description = {product.description}
+            price = {product.price}
+            />
+           
           );
       });
         return <>{allProducts}</>
     }
 }
-  
-  
+// const Filterbutton = () => {
+//     return (
+//         <div>
+//             <label for = "products">Filter</label>
+//             <select id = 'products' name = 'plants'>
+//                 <option value = "low">Price:Low to High</option>
+//                 <option value = "high">Price: High to Low</option>
+//             </select>
+//         </div>
+//     )
 
-// class Products extends React.Component{
-//   constructor(props){
-//       super(props);
-//       this.state = {products :[]};
-//   }
-//   componentDidMount (){
-//       fetch("http://localhost:8000/products")
-//       .then(response =>{
-//           response.json();
-//       })
-//       .then(products=>{
-//           this.setState({products});
-//       })
-//       .then(err=>{
-//           console.log(err);
-//       });
-//   }
-//   render(){
-//       return (
-
-//           <div className = "products">
-//               {this.state.products.map(product =>(
-//                   <>
-//                   <img src = {product.db.image} alt = "plant"></img>
-//                   <h2>{product.db.product_name}</h2>
-//                   <p>{product.db.description}</p>
-//                   <p>{product.db.price}</p>
-//                   </>
-//               ))}
-//           </div>
-//       )
-//   }
 // }
+
+
 // const Products = () => {
 //     return (
 //         <div>

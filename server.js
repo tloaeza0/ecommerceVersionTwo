@@ -25,12 +25,12 @@ db.connect(err =>{
 app.use(express.json());
 app.use(cors());
 
-app.get('/home', (req,res) =>{
-    res.json({message:'Testing'})
-});
+// app.get('/home', (req,res) =>{
+//     res.json({message:'Testing'})
+// });
 
-app.get('/products',(req,res)=>{
-    db.query('SELECT * FROM products', (err, result)=>{
+app.get('/plants',(req,res)=>{
+    db.query('SELECT * FROM plants', (err, result)=>{
         if(err){
             console.log(err);
         }else{
@@ -38,7 +38,16 @@ app.get('/products',(req,res)=>{
         }
     })
 });
-
+ 
+app.get('/rareplants',(req, res)=>{
+    db.query ('SELECT * FROM rare', (err, result)=>{
+        if(err){
+            console.log(err);
+        }else{
+            res.send(result);
+        }
+    })
+})
 
 app.listen(port, ()=>{
     console.log(`listening on port ${port}`);

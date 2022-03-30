@@ -1,5 +1,5 @@
-import React from 'react'
-
+import React from 'react';
+//import Grid from '@react-css/grid';
 const OtherProducts = ({
     image,
     product_name,
@@ -7,12 +7,24 @@ const OtherProducts = ({
     price
   }) =>{
     return(
+      // <div>
+      //   <section id="product-title">
+      //     <h1>Plants</h1>
+      //   </section>
+
+      <main className="product-container">
+        
         <div className = "products">
-        <img className = "ProImg" src = {image}alt ="plant"></img>
+        
+        <img className = "proImg" src = {image}alt ="plant"></img>
         <h2>{product_name}</h2>
         <p>{description}</p>
         <p>{price}</p>
         </div>
+       
+      </main>
+        
+        // </div>
     );
   };
        

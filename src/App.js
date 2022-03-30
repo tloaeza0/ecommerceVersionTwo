@@ -6,7 +6,7 @@ import Home from './Components/Home';
 import Products from './Components/Products';
 import Rare from './Components/Rare';
 import Contact from './Components/Contact';
-import OtherProducts from './Components/OtherProducts';
+
 import {
   BrowserRouter as Router,
   Route,
@@ -27,7 +27,6 @@ function App() {
       </Routes>
       </div>
       <Footer/>
-      <OtherProducts/>
       </Router>
    
   );

@@ -8,10 +8,10 @@ const app = express ();
 
 
 const db = mysql.createConnection({
-    host:process.env.DB_HOST,
-    user:process.env.DB_USER,
-    database:process.env.DB_NAME,
-    password:process.env.DB_PASSWORD
+    host:'us-cdbr-east-05.cleardb.net',
+    user:'b5dd6a4fcc3fed',
+    database:'heroku_93ca4a636c86d9e',
+    password:'heroku_93ca4a636c86d9e'
 });
 
 db.connect(err =>{

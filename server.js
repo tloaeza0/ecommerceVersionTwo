@@ -5,7 +5,7 @@ require('dotenv').config();
 
 const app = express ();
 
-const port = process.env.port;
+
 
 const db = mysql.createConnection({
     host:process.env.DB_HOST,
@@ -48,7 +48,7 @@ app.get('/rareplants',(req, res)=>{
         }
     })
 })
-
+const port = process.env.port;
 
 app.listen(port, ()=>{
     console.log(`listening on port ${port}`);

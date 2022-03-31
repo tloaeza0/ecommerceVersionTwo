@@ -8,6 +8,7 @@ class Products extends React.Component{
         this.state = {
             products :[],
             sort:" ",
+            light: " ",
         };
     }
     sortProducts=(event)=>{
@@ -25,7 +26,24 @@ class Products extends React.Component{
                 a.id > b.id ? 1 : -1
             ),
         }));
+    }
+    lightProducts=(event)=>{
+        const light = event.target.value;
+        //console.log(event.target.value);
+        if(light === ''){
+            this.setState({
+                light:event.target.value, product: this.state.products
+            });
+        }
+        else{
+            this.setState({
+                light: event.target.value,
+                products: this.state.products.filter((product)=> product.light.indexOf(event.target.value)>= 0),
+            });
+        }
+        
     };
+
     componentDidMount (){
         //console.log('testing');
         fetch("http://localhost:8000/plants")
@@ -37,11 +55,11 @@ class Products extends React.Component{
 
         (error)=>{
             this.setState({error:error});
-            console.log(error.status);
+            //console.log(error.status);
         }
         )
         .then((data)=>{
-            console.log(data);
+            //console.log(data);
             this.setState({products:data});
         },
         
@@ -68,12 +86,13 @@ class Products extends React.Component{
         <>
         <Filter count = {this.state.products.length}
         sort={this.state.sort}
+        light={this.state.light}
         sortProducts={this.sortProducts}
+        lightProducts = {this.lightProducts}
         />
 
-        
         <div className = "product-container">{allProducts}</div>
-
+        
        
         </>)
         

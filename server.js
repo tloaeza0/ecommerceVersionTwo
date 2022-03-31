@@ -49,15 +49,7 @@ app.get('/rareplants',(req, res)=>{
     })
 })
 
-app.get('/low-to-high',(req,res)=>{
-    db.query('SELECT * FROM plants ORDER BY price ASC', (err, result)=>{
-        if(err){
-            console.log(err);
-        }else{
-            res.send(result);
-        }
-    })
-})
+
 app.listen(port, ()=>{
     console.log(`listening on port ${port}`);
 });

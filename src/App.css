@@ -461,7 +461,7 @@ footer a:hover{
     }
 }
 /* MEDIA QUERY FOR DESKTOP */
-@media only screen and (min-width:1025px) and (max-width:1800px){
+@media only screen and (min-width:1025px) and (max-width:1916px){
     .product-container{
         display: grid;
         grid-template-columns: repeat(3,1fr);
@@ -473,8 +473,8 @@ footer a:hover{
         margin-top: 5em;
     }
     .products > .proImg{
-        height:320px;
-        width:320px;
+        height:340px;
+        width:340px;
     }
     .products h2{
         font-size: 1.5em;
@@ -605,8 +605,14 @@ form .submit-button{
     justify-content: space-evenly;
     padding:1em;
     margin:1em;
-    padding-top: 10em;
+    padding-top:10em;
+    height:10vh;
+    font-family: 'Cinzel', serif;
 }
 .filter div{
     flex:1;
+}
+.filter-sort select{
+    width:100px;
+    margin-left:1em;
 }

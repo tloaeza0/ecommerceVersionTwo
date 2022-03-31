@@ -12,7 +12,7 @@ const OtherProducts = ({
       //     <h1>Plants</h1>
       //   </section>
       
-      <main className="product-container">
+      
         
         <div className = "products">
         
@@ -23,7 +23,7 @@ const OtherProducts = ({
         <button className="product-button">Buy Now</button>
         </div>
        
-      </main>
+      
         
         // </div>
     );

@@ -14,7 +14,7 @@ export default class Filter extends Component {
                 </select>
                 <div className = "filter-light">
                     LIGHT {" "}
-                    <select id = "select" value = {this.props.light} onChange={this.props.lightProducts}>
+                    <select id = "select" value = {this.props.light} onChange={this.props.filterProducts}>
                         <option>None</option>
                         <option value = "Low Light">Low Light</option>
                         <option value = "Medium Light">Medium Light</option>

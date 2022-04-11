@@ -8,6 +8,7 @@ class Rare extends React.Component{
         this.state = {
             products :[],
             sort :" ",
+            light: " "
         }
     }
     sortProducts=(event)=>{
@@ -26,22 +27,26 @@ class Rare extends React.Component{
             ),
         }));
     };
-    lightProducts=(event)=>{
+    filterProducts=(event)=>{
         const light = event.target.value;
         //console.log(event.target.value);
-        if(light === ''){
-            this.setState({
-                light:event.target.value, product: this.state.products
+        if(light === 'Low Light'){
+            
+                this.setState({
+                light: event.target.value,
+                products: this.state.products.filter((product)=> product.light.indexOf(event.target.value)>= 0),
             });
-        }
-        else{
+        }else if (light === 'Medium Light'){
             this.setState({
                 light: event.target.value,
                 products: this.state.products.filter((product)=> product.light.indexOf(event.target.value)>= 0),
             });
-        }
-        
-    };
+        }else if(light === "Bright Light"){
+            this.setState({
+                light: event.target.value,
+                products: this.state.products.filter((product)=> product.light.indexOf(event.target.value)>= 0),
+            });
+        }}
     componentDidMount (){
         console.log('testing');
         fetch("http://localhost:8000/rareplants")
@@ -86,7 +91,7 @@ class Rare extends React.Component{
         light ={this.state.light}
         sort={this.state.sort}
         sortProducts={this.sortProducts}
-        lightProducts = {this.lightProducts}
+        filterProducts = {this.filterProducts}
         />
 
         

@@ -8,10 +8,14 @@ const app = express ();
 
 
 const db = mysql.createConnection({
-    host:'us-cdbr-east-05.cleardb.net',
-    user:'b5dd6a4fcc3fed',
-    database:'heroku_93ca4a636c86d9e',
-    password:'heroku_93ca4a636c86d9e'
+    // host:'us-cdbr-east-05.cleardb.net',
+    // user:'b5dd6a4fcc3fed',
+    // database:'heroku_93ca4a636c86d9e',
+    // password:'heroku_93ca4a636c86d9e'
+    host:'localhost',
+    user: 'root',
+    database: 'ecommerce',
+    password:'Bellastank154'
 });
 
 db.connect(err =>{

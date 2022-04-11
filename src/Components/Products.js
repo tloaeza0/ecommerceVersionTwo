@@ -20,28 +20,34 @@ class Products extends React.Component{
             .slice()
             .sort((a,b)=>
                 sort ==='low'
-                ? a.price > b.price ? 1:-1:
+                ? a.price > b.price ? 2:-2:
                 sort === 'high' 
-                ? a.price < b.price ? 1:-1:
-                a.id > b.id ? 1 : -1
+                ? a.price < b.price ? 2:-2:
+                a.id > b.id ? 2 : -2
             ),
         }));
     }
-    lightProducts=(event)=>{
+    filterProducts=(event)=>{
+        
         const light = event.target.value;
         //console.log(event.target.value);
-        if(light === ''){
-            this.setState({
-                light:event.target.value, product: this.state.products
+        if(light === 'Low Light'){
+            
+                this.setState({
+                light: event.target.value,
+                products: this.state.products.filter((product)=> product.light.indexOf(event.target.value)>= 0),
             });
-        }
-        else{
+        }else if (light === 'Medium Light'){
+            this.setState({
+                light: event.target.value,
+                products: this.state.products.filter((product)=> product.light.indexOf(event.target.value)>= 0),
+            });
+        }else if(light === "Bright Light"){
             this.setState({
                 light: event.target.value,
                 products: this.state.products.filter((product)=> product.light.indexOf(event.target.value)>= 0),
             });
         }
-        
     };
 
     componentDidMount (){
@@ -88,7 +94,7 @@ class Products extends React.Component{
         sort={this.state.sort}
         light={this.state.light}
         sortProducts={this.sortProducts}
-        lightProducts = {this.lightProducts}
+        filterProducts = {this.filterProducts}
         />
 
         <div className = "product-container">{allProducts}</div>

@@ -1,13 +1,14 @@
 const express = require('express');
 const cors = require('cors');
 const mysql= require('mysql');
+// const mysql2 = require('mysql2');
 require('dotenv').config();
 
 const app = express ();
 
 
 
-const db = mysql.createConnection({
+const db = mysql.createPool({
     // host:'us-cdbr-east-05.cleardb.net',
     // user:'b5dd6a4fcc3fed',
     // database:'heroku_93ca4a636c86d9e',
@@ -18,7 +19,7 @@ const db = mysql.createConnection({
     password:'Bellastank154'
 });
 
-db.connect(err =>{
+db.getConnection(err =>{
     if(err) {
         return err;
     }else{

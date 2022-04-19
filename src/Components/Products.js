@@ -65,7 +65,7 @@ class Products extends React.Component{
         }
         )
         .then((data)=>{
-            //console.log(data);
+            console.log(data);
             this.setState({products:data});
         },
         
